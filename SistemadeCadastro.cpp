@@ -31,8 +31,8 @@ int main(){
     char login[30]; // responsável por armazenar a senha inserida pelo usuário
     char senha[30]; // responsável por armazenar a senha inserida pelo usuário
 
-    strcpy(p[0].login, "Unip"); // Definindo o login "Unip" na struct
-    strcpy(p[0].senha, "unip123"); // Definindo a senha "únip123"  na struct
+    strcpy(p[0].login, "RH"); // Definindo o login "RH" na struct
+    strcpy(p[0].senha, "rh12345"); // Definindo a senha "rh12345"  na struct
 
     printf("\nlogin:");
     scanf("%s", login); // armazenando os dados inseridos pelo usuário para o vetor login que está dentro da função main
@@ -41,8 +41,9 @@ int main(){
     scanf("%s", senha); // armazenando os dados inseridos pelo usuário para o vetor senha que está dentro da função main
 
     if ((strcmp(login,p[0].login)==0) && (strcmp(senha,p[0].senha)==0)){ // A função strcmp é responsável por comparar string com string
-        printf("Usuário logado"); // se os vetores de dentro da struct tiver os mesmos dados do vetor interno da função main, usuário será logado.
-    }else{
+        printf("Usuário logado, digite qualquer numero para entrar no sistema"); // se os vetores de dentro da struct tiver os mesmos dados do vetor interno da função main, usuário será logado.
+    	scanf("%d", &SI);
+	}else{
         printf("Login e/ou senha incorretos, digite qualquer numero para sair!"); // senão, login ou senha incorreta.
         scanf("%d", &SI);
         return 1;// caso erre a senha ira fechar o programa
