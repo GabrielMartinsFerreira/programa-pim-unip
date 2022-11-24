@@ -8,7 +8,7 @@ char nome[SIZE][50];//declarações das variaveis no escopo global
 char email[SIZE][50];//declarações das variaveis no escopo global
 char info[SIZE][50];//declarações das variaveis no escopo global
 double cpf[SIZE];//declarações das variaveis no escopo global
-int RA [SIZE];//declarações das variaveis no escopo global
+int Matricula [SIZE];//declarações das variaveis no escopo global
 int op;//declarações das variaveis no escopo global
 int SI;//declarações das variaveis no escopo global
 
@@ -96,7 +96,7 @@ void lista(){//inicio da função lista, responsavel por mostrar todos os usuari
 	int i;
 	for(i=0;i<SIZE;i++){
 		if(cpf[i]>0){
-		printf("\nNome: %s\nEmail: %s\nCPF: %12.0lf\nRA: %d\nInformação: %s\n", nome[i], email[i],cpf[i], RA[i], info[i]);
+		printf("\nNome: %s\nEmail: %s\nCPF: %12.0lf\nMatricula: %d\nInformação: %s\n", nome[i], email[i],cpf[i], Matricula[i], info[i]);
 		}else{
 			break;
 		}
@@ -121,8 +121,8 @@ void cadastro(){//Inicio da função cadastro, responsavel por armazenar tempora
 		printf("\nDigite o cpf: ");
 		scanf("%lf", &cpf[linha]);
 		fflush(stdin);
-		printf("\nDigite o RA: ");
-		scanf("%d", &RA[linha]);
+		printf("\nDigite a Matricula: ");
+		scanf("%d", &Matricula[linha]);
 		fflush(stdin);
 		printf("\nDigite 1 para continuar ou outro valor para sair: ");
 		scanf("%d", &op);
@@ -131,7 +131,7 @@ void cadastro(){//Inicio da função cadastro, responsavel por armazenar tempora
 	}while(op==1);
 }//fim da função de cadastro
 void pesquisa(){//inicio da função pesquisa, responsavel por pesquisar via RA ou Email todos os dados anexados nessas opções
-	int RAPesquisa;
+	int MatriculaPesquisa;
 	char emailPesquisa[50];
 	int i;
 	do{
@@ -139,11 +139,11 @@ void pesquisa(){//inicio da função pesquisa, responsavel por pesquisar via RA 
 		scanf("%d", &op);
 		switch(op){
 			case 1:
-				printf("\nDigite o RA: ");
-				scanf("%d", &RAPesquisa);
+				printf("\nDigite a MATRICULA: ");
+				scanf("%d", &MatriculaPesquisa);
 				for(i=0;i<SIZE;i++){
-					if(RA[i]==RAPesquisa){
-						printf("\nNome: %s\nEmail: %s\n CPF: %12.0lf\n RA: %d\nInformação: %s\n", nome[i], email[i],cpf[i], RA[i], info[i]);
+					if(Matricula[i]==MatriculaPesquisa){
+						printf("\nNome: %s\nEmail: %s\n CPF: %12.0lf\n Matricula: %d\nInformação: %s\n", nome[i], email[i],cpf[i], Matricula[i], info[i]);
 					}
 				}
 				break;
@@ -152,7 +152,7 @@ void pesquisa(){//inicio da função pesquisa, responsavel por pesquisar via RA 
 			scanf("%s", &emailPesquisa);				
 			for(i=0;i<SIZE;i++){
 					if(strcmp(email[i],emailPesquisa)==0){
-						printf("\nNome: %s\nEmail: %s\nCPF: %12.0lf\nRA: %d\nInformação: %s\n", nome[i], email[i],cpf[i], RA[i], info[i]);
+						printf("\nNome: %s\nEmail: %s\nCPF: %12.0lf\nRA: %d\nInformação: %s\n", nome[i], email[i],cpf[i], Matricula[i], info[i]);
 					}
 				}
 				break;
