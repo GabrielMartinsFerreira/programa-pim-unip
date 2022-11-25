@@ -86,7 +86,7 @@ void manual(){//inicio do manual de instrução do sistema
 	do{
 	printf("\nSeja bem vindo ao manual do sistema!\n");
 	printf("\nNeste manual irá mostrar algumas dicas para cadastro de clientes e funcionários e regras importantes!\n");
-	printf("\nManual do sistema:\n\n1º Não digitar letras nos comandos de opção, apenas números!\n\n2º Nos setores de cadastro CPF e RA, colocar apenas números!\n\n3º Nomes e E-mail permitidos apenas 49 caracteres\n\n4º Qualquer tipo de erro relatar ao administrador do sistema!\n\n5º Clientes e funcionarios são cadastrado no mesmo sistema. Código Ra padrão para cadastrar cliente é 221133 - pode ser alterado!\n\n6º Na função informação, anexar dados importantes informando se é funcionario,cliente,qual o cargo etc! ");
+	printf("\nManual do sistema:\n\n1º Não digitar letras nos comandos de opção, apenas números!\n\n2º Nos setores de cadastro CPF e Matricula, colocar apenas números!\n\n3º Nomes e E-mail permitidos apenas 49 caracteres\n\n4º Qualquer tipo de erro relatar ao administrador do sistema!\n\n5º Clientes e funcionarios são cadastrado no mesmo sistema. Código Matricula padrão para cadastrar cliente é 232323 - pode ser alterado este código!\n\n6º Na função informação, anexar dados importantes informando se é funcionario,cliente,qual o cargo etc! ");
 	printf("\n\nDigite qualquer número para retornar ao menu principal: ");
 	scanf("%d", &esc);
 
