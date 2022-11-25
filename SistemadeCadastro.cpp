@@ -135,7 +135,7 @@ void pesquisa(){//inicio da função pesquisa, responsavel por pesquisar via RA 
 	char emailPesquisa[50];
 	int i;
 	do{
-		printf("\nDigite 1 para pesquisar RA ou 2 para pesquisar o email: ");
+		printf("\nDigite 1 para pesquisar Matricula ou 2 para pesquisar o email: ");
 		scanf("%d", &op);
 		switch(op){
 			case 1:
